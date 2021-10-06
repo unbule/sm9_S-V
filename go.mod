@@ -1,4 +1,4 @@
-module go
+module github.com/unbule/sm9_S-V
 
 go 1.15
 
