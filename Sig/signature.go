@@ -6,6 +6,11 @@ import (
 	"github.com/xlcetc/cryptogm/sm/sm9"
 )
 
+//@ import "github.com/xlcetc/cryptogm/sm/sm9"
+//@ then use func MasterKeyGen(rand io.Reader) (mk *MasterKey, err error) to get mk
+//@ such as main.go
+
+//Signature with sm9 to get a sign
 func Signature(id string, message []byte, hid byte, mk *sm9.MasterKey) (*sm9.Sm9Sig, error) {
 	var uid = []byte(id)
 	uk, err := sm9.UserKeyGen(mk, uid, hid)
